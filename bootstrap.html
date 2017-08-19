@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style type="text/css">
+    * {
+        /*border: 1px solid grey;
+        margin: -1px;*/
+    }
+
+    body {
+        /*padding: 30px;
+        margin: 30px;*/
+    }
+
+    .item {
+        height: 60px;
+        line-height: 60px;
+        width: 200px;
+
+        background-color: lightgrey;
+        border: 2px solid grey;
+        margin: 5px;
+        font-size: 40px;
+        font-weight: 600;
+        display: inline-block;
+        text-align: center;
+    }
+    /*   span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+    }*/
+
+    .feedback-photo-container {
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-right: 5px;
+        width: 64px;
+        height: 64px;
+        border: 3px solid black;
+        border-radius: 8px;
+    }
+
+    .feedback-photo-box {
+        padding-left: 6px;
+        margin-top: -3px;
+    }
+
+    .feedback-wrapper {
+        /*height: 100%;*/
+        /*width: 40%;*/
+        /*width: 387px;
+        height: 122px;*/
+        max-width: 740px;
+        /*border: 3px solid grey;*/
+        padding: 5px 15px 5px 5px;
+        /*width: 50%;*/
+    }
+
+    .feedback-text-container {
+        margin-top: 8px;
+        /*margin-left: 3px;*/
+        padding-left: 15px;
+        /*text-align: justify;
+        text-justify: inter-word;*/
+    }
+
+    .red {
+        background: rgba(255, 0, 0, 0.5);
+    }
+
+    .bg-grey {
+        background: lightgrey;
+    }
+
+    .black {
+        /*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); */
+        color: black;
+    }
+
+    .height-120 {
+        height: 120px;
+    }
+
+    .separator-big {
+        /*height: 700px*/
+    }
+    </style>
+</head>
+
+<body>
+    <!-- CAROUSEL EXPERIMENTAL -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class=" col-lg-6 col-xl-6 col-md-8 col-sm-10 col-10 ">
+                <div class="row justify-content-around">
+                    <div id="carouselExampleCaptions" class="carousel slide row justify-content-center" data-ride="carousel">
+                        <div class="carousel-innerbg-info col-10" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="d-block">
+                                    <div class="media feedback-wrapper mx-auto border border-secondary">
+                                        <div class="feedback-photo-container d-sm-block d-none">
+                                            <div class="feedback-photo-box"><i class="fa fa-user fa-4x"></i></div>
+                                        </div>
+                                        <div class="media-body feedback-text-container">
+                                            <h4 class="media-heading">Кирилл, <span class="text-nowrap">29 лет</span>, <span class="text-nowrap">г. Барабинск</span></h4>
+                                            <p class="text-secondary">1. Показ баннера, безусловно, однородно индуцирует медиамикс, опираясь на опыт западных коллег. Искусство медиапланирования, на первый взгляд, амбивалентно!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-block">
+                                    <div class="media feedback-wrapper mx-auto border border-secondary">
+                                        <div class="feedback-photo-container d-sm-block d-none">
+                                            <div class="feedback-photo-box"><i class="fa fa-user fa-4x"></i></div>
+                                        </div>
+                                        <div class="media-body feedback-text-container">
+                                            <h4 class="media-heading">Кирилл, <span class="text-nowrap">29 лет</span>, <span class="text-nowrap">г. Барабинск</span></h4>
+                                            <p class="text-secondary">2. Показ баннера, безусловно, однородно индуцирует медиамикс, опираясь на опыт западных коллег. Искусство медиапланирования, на первый взгляд, амбивалентно!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-block">
+                                    <div class="media feedback-wrapper mx-auto border border-secondary">
+                                        <div class="feedback-photo-container d-sm-block d-none">
+                                            <div class="feedback-photo-box"><i class="fa fa-user fa-4x"></i></div>
+                                        </div>
+                                        <div class="media-body feedback-text-container">
+                                            <h4 class="media-heading">Кирилл, <span class="text-nowrap">29 лет</span>, <span class="text-nowrap">г. Барабинск</span></h4>
+                                            <p class="text-secondary">3. Показ баннера, безусловно, однородно индуцирует медиамикс, опираясь на опыт западных коллег. Искусство медиапланирования, на первый взгляд, амбивалентно!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev bg-warning col-1 ml-auto" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            
+                        </a>
+                        <a class="carousel-control-next bg-warning col-1 mr-auto" href="#carouselExampleCaptions" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            
+                        </a>
+                    </div>
+                    <div class="col-1 bg-danger justify-content-center">
+            <button type="button" class="btn btn-primary ml-auto">Оставить отзыв</button>
+            </div>
+                </div>
+                    
+            
+            </div>
+            
+        </div>
+
+
+    </div>
+    <!-- CAROUSEL -->
+    <!--     <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="d-block">
+                        <div class="media feedback-wrapper mx-auto border border-secondary">
+                            <div class="feedback-photo-container d-sm-block d-none">
+                                <div class="feedback-photo-box"><i class="fa fa-user fa-4x"></i></div>
+                            </div>
+                            <div class="media-body feedback-text-container">
+                                <h4 class="media-heading">Кирилл, <span class="text-nowrap">29 лет</span>, <span class="text-nowrap">г. Барабинск</span></h4>
+                                <p class="text-secondary">1. Показ баннера, безусловно, однородно индуцирует медиамикс, опираясь на опыт западных коллег. Искусство медиапланирования, на первый взгляд, амбивалентно!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block">
+                        <div class="media feedback-wrapper mx-auto border border-secondary">
+                            <div class="feedback-photo-container d-sm-block d-none">
+                                <div class="feedback-photo-box"><i class="fa fa-user fa-4x"></i></div>
+                            </div>
+                            <div class="media-body feedback-text-container">
+                                <h4 class="media-heading">Кирилл, <span class="text-nowrap">29 лет</span>, <span class="text-nowrap">г. Барабинск</span></h4>
+                                <p class="text-secondary">2. Показ баннера, безусловно, однородно индуцирует медиамикс, опираясь на опыт западных коллег. Искусство медиапланирования, на первый взгляд, амбивалентно!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block">
+                        <div class="media feedback-wrapper mx-auto border border-secondary">
+                            <div class="feedback-photo-container d-sm-block d-none">
+                                <div class="feedback-photo-box"><i class="fa fa-user fa-4x"></i></div>
+                            </div>
+                            <div class="media-body feedback-text-container">
+                                <h4 class="media-heading">Кирилл, <span class="text-nowrap">29 лет</span>, <span class="text-nowrap">г. Барабинск</span></h4>
+                                <p class="text-secondary">3. Показ баннера, безусловно, однородно индуцирует медиамикс, опираясь на опыт западных коллег. Искусство медиапланирования, на первый взгляд, амбивалентно!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev bg-warning" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+            <a class="carousel-control-next bg-warning" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+        </div>
+    </div>
+    <div class="separator-big"></div> -->
+    <!-- CAROUSEL END -->
+    <!-- CARD FEEDBACK -->
+    <!-- <div class="media feedback-wrapper">
+        <span id="HIDE ME"></span>
+        <div class="feedback-photo-container d-sm-block d-none">
+            <div class="feedback-photo-box"><i class="fa fa-user fa-4x"></i></div>
+        </div>
+        <div class="media-body feedback-text-container">
+            <h4 class="media-heading">Кирилл, <span class="text-nowrap">29 лет</span>, <span class="text-nowrap">г. Барабинск</span></h4>
+            <p>Показ баннера, безусловно, однородно индуцирует медиамикс, опираясь на опыт западных коллег. Искусство медиапланирования, на первый взгляд, амбивалентно!</p>
+        </div>
+    </div> -->
+    <!-- BOOTSTRAP RESPONSIVE SHIT STARTS HERE -->
+    <div class="separator-big"></div>
+    <!-- SLIDE START -->
+    <!-- <div class="media feedback-wrapper mx-auto border border-secondary">
+        
+        <div class="feedback-photo-container d-sm-block d-none">
+            <div class="feedback-photo-box"><i class="fa fa-user fa-4x"></i></div>
+        </div>
+        <div class="media-body feedback-text-container">
+            <h4 class="media-heading">Кирилл, <span class="text-nowrap">29 лет</span>, <span class="text-nowrap">г. Барабинск</span></h4>
+            <p class="text-secondary">3. Показ баннера, безусловно, однородно индуцирует медиамикс, опираясь на опыт западных коллег. Искусство медиапланирования, на первый взгляд, амбивалентно!</p>
+        </div>
+    </div> -->
+    <!-- SLIDE END -->
+    <div class="separator-big"></div>
+    <!-- <div class="container">
+        <a class="btn btn-primary" data-toggle="collapse" href="#bootstrapResponsive">
+        show shit
+        </a>
+    </div>
+    <div class="collapse container" id="bootstrapResponsive">
+        <div class="lead text-center">Show only if less than:</div>
+        <div class="row bg-info">
+            <div class="item d-sm-none">&lt;SM</div>
+            <div class="item d-md-none">&lt;MD</div>
+            <div class="item d-lg-none">&lt;LG</div>
+            <div class="item d-xl-none">&lt;XL</div>
+            <div class="item d-none">HIDDEN</div>
+            <div class="item ">ALWAYS</div>
+        </div>
+        <div class="lead text-center">Show only current state:</div>
+        <div class="row bg-success">
+            <div class="item d-sm-none">XS</div>
+            <div class="item d-xl-none d-lg-none d-md-none d-sm-block d-none">SM</div>
+            <div class="item d-xl-none d-lg-none d-md-block d-sm-none d-none">MD</div>
+            <div class="item d-xl-none d-lg-block d-md-none d-sm-none d-none">LG</div>
+            <div class="item d-xl-block d-lg-none d-md-none d-sm-none d-none">XL</div>
+        </div>
+        <div class="lead text-center">Show only if larger than:</div>
+        <div class="row bg-warning">
+            <div class="item">XS <small>always</small></div>
+            <div class="item d-sm-block d-none">SM</div>
+            <div class="item d-md-block d-none">MD</div>
+            <div class="item d-lg-block d-none">LG</div>
+            <div class="item d-xl-block d-none">XL</div>
+        </div>
+    </div> -->
+    <!-- BOOSTSTRAP RESPONSIVE SHIT ENDS HERE -->
+    <!-- VERTICAL ALIGN EXAMPLE -->
+    <!--     <div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Example label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Another label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      </div>
+    </form>   
+  </div>  
+</div> -->
+    <!-- EXAMPLE END HERE -->
+    <!--     <div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+</div>
+<div class="row">
+  <div class="col-md-3 ml-auto">.col-md-3 .ml-md-auto</div>
+  <div class="col-md-3 ml-auto">.col-md-3 .ml-md-auto</div>
+</div>
+<div class="row">
+  <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+  <div class="col-auto">.col-auto</div>
+</div> -->
+    <!-- <footer class="container-fluid height-120 bg-info"></footer> -->
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/b0053a7b8e.js"></script>
+</body>
+
+</html>
