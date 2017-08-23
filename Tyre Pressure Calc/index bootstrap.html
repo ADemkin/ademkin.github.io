@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- created by Anton Demkin antondemkin@yandex.ru -->
+<!-- v 1.0.1 -->
+<html>
+<head>
+	<title>Tyre Pressure calculator</title>
+	<meta charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class='main'>
+<label>Rider weight:</label>
+<input type="number" id="weight" value="76" min='30' max='130' maxlength='3' step="0.1">
+<!-- oninput="calculate()" onkeypress='return (event.charCode >= 46 && event.charCode <= 57 && event.charCode != 47)' -->
+<label>kg</label> <br><br>
+
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Rider's weight" aria-describedby="sizing-addon3" >
+  <span class="input-group-addon" id="sizing-addon3">kg</span>
+</div>
+
+
+<label>Tyre width: </label>
+<select id='width'>
+	<!-- <option value='20'>700x20c</option> -->
+    <option value="23">700x23c</option>
+    <option value="25">700x25c</option>
+    <option value="28">700x28c</option>
+    
+</select>
+<br><br>
+<button onclick="calculate()">calculate</button>
+<br><br>
+<p id='result'></p>
+</div>
+</body>
+<!-- <footer> 123123</footer> -->
+<script>
+	function calculate() {
+	    var width = document.getElementById('width'),
+	        weight = document.getElementById('weight'),
+	        result = document.getElementById("result"),
+	        psi = 0,
+	        bar = 0;
+
+
+	    //0.45359237 kgs in 1 lb
+	    // 	Tire Width=20: Pressure(psi) = (0.33 * Rider Weight in lbs) + 63.33 
+	    // Tire Width=23: Pressure(psi) = (0.33 * Rider Weight in lbs) + 53.33 
+	    // Tire Width=25: Pressure(psi) = (0.33 * Rider Weight in lbs) + 43.33 
+	    // Tire Width=28: Pressure(psi) = (0.33 * Rider Weight in lbs) + 33.33 
+
+	    if (width.value == 20) {
+	        psi = weight.value * 0.726 + 63.33;
+
+	    } else if (width.value == 23) {
+	        psi = weight.value * 0.726 + 53.33;
+
+	    } else if (width.value == 25) {
+	        psi = weight.value * 0.726 + 43.33;
+
+	    } else if (width.value == 28) {
+	        psi = weight.value * 0.726 + 33.33;
+
+	    } else {
+	        psi = 'unknown';
+	    }
+
+	    bar = (psi * 0.0689476).toFixed(1);
+	    psi = psi.toFixed(1);
+	    result.innerHTML = 'Recomended tyre pressure is ' + psi + ' psi or ' + bar + ' bar.';
+
+	}
+
+</script>
+
+</html>

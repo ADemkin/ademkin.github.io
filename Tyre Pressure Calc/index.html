@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <title>Pressure calc</title>
+    <!-- Bootstrap -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .bg-grey {
+            background-color: #EEE;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="page-header text-center mb-2">
+        <h1 class="display-4">Tyre Pressure Calculator</h1>
+        <small>get your tyres pumped up just as it should be!!</small>
+    </div>
+    <!-- <div class="container">
+        <div class="jumbotron">
+            <p>Have you everhiuhdas iuhoasdf iudshf oiushdf ushfio aushdfioacmsimfxoaismu aosiu mhoiasud hoiasum oisudhm fioasmuh fioasmuh afiosudhm ufsdf fsd
+                <br>
+                <br>asoi fjpoasi jopsij fopaisjf opaisj fopisajdpofijasopfi jopsi jopasij oiasj foiasj pofiajsd poflksjnnf479y fe9ybuybv dhb kjdhsb ihsfo iasudfo aisuhm oiasudhm ioasduhm </p>
+            <form class='col-xs-12'>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon">Your weight:</span>
+                    <input type="number" id="weight" value="75.0" min='20' max='150' maxlength='3' step="0.1" size="4" class="form-control" placeholder="Rider's weight">
+                    <span class="input-group-addon">kg</span>
+                </div>
+                <h5>Tyre width:<div id="tyreSelection"></div></h5>
+                <div class="btn-group btn-group-lg" role='group'>
+                    <button type="button" class="btn btn-default">23c</button>
+                    <button type="button" class="btn btn-default">25c</button>
+                    <button type="button" class="btn btn-default">28c</button>
+                </div>
+                <h5>Metric system:<div id="metricSystemSelection"></div></h5>
+                <div class="btn-group" role='group'>
+                    <button type="button" class="btn btn-default btn-lg">PSI</button>
+                    <button type="button" class="btn btn-default btn-lg">BAR</button>
+                </div>
+                
+                <br>
+                <br>
+            </form>
+            <p>Huhoiudhsafoi uahsdi ufhosaidufhi ouhfio uas873h48 7hilufas78h9 798 9 9384 9837f 98h 987shd98 7yxcv98 xzcui guzx kjhb vkjzhb jzx bcjkvhxcjk vbjk jkzc vo!
+            </p>
+        </div>
+    </div>
+    <div class="well well-lg">Your tyre pressure is...
+        <p>85.5psi!</p>
+    </div>
+    <div class="container">
+        H8h78hiuhiuhofiaushdfiuashdofiuh afisudio asufio shfi oasuhfi oaisfouhasiof uoia hif jasb djkfhbkjhb jkabsj bjkf baj bkjsaf bkjbf jka j jka fkjashf yheu hwieh oiushfo iuhfashfiou hijdasfk sh!
+    </div> -->
+    <div class="container bg-grey border border-secondary rounded ">
+        <div class="form py-2">
+            <div class="col-sm-12 my-3">
+                <div class="input-group input-group-lg"> 
+                    <input type="number" id="weight" value="75.0" min='20' max='150' maxlength='3' step="0.1" size="4" class="form-control" placeholder="Your's weight">
+                    <span class="input-group-addon">kg</span>
+                </div>
+                <div class="my-3">
+                    <div class="btn-group btn-group-lg" data-toggle="buttons">
+                        <label class="btn btn-primary active">
+                            <input type="radio" name="options" id="tyreWidth23" autocomplete="off" checked>23c</label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="tyreWidth25" autocomplete="off">25c</label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="tyreWidth28" autocomplete="off">28c</label>
+                    </div>
+                </div>
+
+                <div class="my-3">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control"  placeholder="Pressure is..." id="resultPressure" value="" readonly></input>
+                         
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                                Action><span id="pressureMetricSystem">PSI</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">PSI</a>
+                                <a class="dropdown-item" href="#">BAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</body>
+
+</html>
