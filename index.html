@@ -48,19 +48,11 @@
                             <input type="radio" class="toggle" name="options" value="28" id="width28" autocomplete="off">28c
                         </label>
                     </div>
-                    <div class="btn-group btn-group-lg" role="group" data-toggle="buttons" id="balance">
-                        <label class="btn btn-primary active">
-                            <input type="radio" class="toggle" name="options" id="isBalanced" value="balanced" autocomplete="off" checked>50 / 50
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" class="toggle" name="options" id="isUnbalanced" value="unbalanced" autocomplete="off">45 / 55
-                        </label>
-                    </div>
                     <div class="btn-group btn-group-lg" role="group" data-toggle="buttons" id="system">
                         <label class="btn btn-primary active">
-                            <input type="radio" class="toggle" name="options" autocomplete="off" value="psi" checked>PSI</label>
+                            <input type="radio" class="toggle" name="options" autocomplete="off" id="systemPsi" value="psi" checked>PSI</label>
                         <label class="btn btn-primary">
-                            <input type="radio" class="toggle" name="options" autocomplete="off" value="bar">BAR</label>
+                            <input type="radio" class="toggle" name="options" autocomplete="off" id="systemBar" value="bar">BAR</label>
                     </div>
                 </div>
                 <div class="my-3">
@@ -84,10 +76,46 @@
             const result = document.getElementById("resultPressure")
 
             getWidth = () => $("#width label.active input").val()
-            isBalanced = () => $("#balance label.active input").val() == 'balanced' ? true : false
-            isPsi = () => $("#system label.active input").val() == 'psi' ? true : false
+            getSystem = () => $("#system label.active input").val()
+            getWeight = () => $("#weight").val()
 
-            input.oninput = () => result.value = `${input.value}kg ${getWidth()}mm ${isBalanced() ? '50/50' : '45/55'} ${isPsi() ? 'psi' : 'bar'}`;
+            psiToBar = (psi) => psi * 0.0689476
+            rounded = (value) => value.toFixed(1)
+
+            calculatePsiPressure = (weight, width) => {
+                // todo make better code
+                if (width == 23) {
+                    return weight * 0.726 + 53.33;
+                } else if (width == 25) {
+                    return weight * 0.726 + 43.33;
+                } else if (width == 28) {
+                    return weight * 0.726 + 33.33;
+                } else {
+                    console.error(`unknown width ${width}`)
+                }
+            };
+
+            preformatMessage = (psiPressure, metricSystem) => {
+                var pressure;
+                if (metricSystem == 'bar') {
+                    pressure = rounded(psiToBar(psiPressure));
+                } else {
+                    pressure = rounded(psiPressure);
+                };
+                return `${pressure} ${metricSystem}`;
+            };
+
+            createMessage = () => preformatMessage(
+                calculatePsiPressure(getWeight(), getWidth()),
+                getSystem(),
+            );
+
+            update = () => result.value = createMessage();
+
+            input.oninput = () =>  update();
+            update();
+            // TODO: somehow bind changes
+            $("#width label input").onclick = () => console.log("23")
         </script>
 
 </body>
