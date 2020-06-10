@@ -113,9 +113,8 @@
             update = () => result.value = createMessage();
 
             input.oninput = () =>  update();
+            $(".btn").on("click", () => update());
             update();
-            // TODO: somehow bind changes
-            $("#width label input").onclick = () => console.log("23")
         </script>
 
 </body>
