@@ -1,3 +1,6 @@
 [submodule "emdr-js"]
 	path = emdr-js
 	url = git@github.com:ADemkin/emdr-js.git
+[submodule "tyrepressurecalc"]
+	path = tyrepressurecalc
+	url = git@github.com:ADemkin/tyrepressurecalc.git
