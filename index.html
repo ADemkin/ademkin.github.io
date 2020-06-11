@@ -47,6 +47,12 @@
                         <label class="btn btn-primary">
                             <input type="radio" class="toggle" name="options" value="28" id="width28" autocomplete="off">28c
                         </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" class="toggle" name="options" value="30" id="width28" autocomplete="off">30c
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" class="toggle" name="options" value="32" id="width28" autocomplete="off">32c
+                        </label>
                     </div>
                     <div class="btn-group btn-group-lg" role="group" data-toggle="buttons" id="system">
                         <label class="btn btn-primary active">
@@ -72,9 +78,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
         <script type="text/javascript">
-            const input = document.getElementById("weight")
             const result = document.getElementById("resultPressure")
-
+            const weightModifier = {
+                23: 50,
+                25: 40,
+                28: 30,
+                30: 20,
+                32: 10,
+            };
             getWidth = () => $("#width label.active input").val()
             getSystem = () => $("#system label.active input").val()
             getWeight = () => $("#weight").val()
@@ -83,16 +94,13 @@
             rounded = (value) => value.toFixed(1)
 
             calculatePsiPressure = (weight, width) => {
-                // todo make better code
-                if (width == 23) {
-                    return weight * 0.726 + 53.33;
-                } else if (width == 25) {
-                    return weight * 0.726 + 43.33;
-                } else if (width == 28) {
-                    return weight * 0.726 + 33.33;
-                } else {
-                    console.error(`unknown width ${width}`)
-                }
+                if (!weightModifier.hasOwnProperty(width)) {
+                    console.error(`unknown width ${width}`);
+                    return -1
+                };
+                magicMultiplier = 0.726
+                magicAddition = 3.33
+                return weight * magicMultiplier + weightModifier[width] + magicAddition;
             };
 
             preformatMessage = (psiPressure, metricSystem) => {
