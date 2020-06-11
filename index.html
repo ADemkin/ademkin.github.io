@@ -96,8 +96,9 @@
             calculatePsiPressure = (weight, width) => {
                 if (!weightModifier.hasOwnProperty(width)) {
                     console.error(`unknown width ${width}`);
-                    return -1
+                    return NaN;
                 };
+                // i dont really remember where i got this formula from
                 magicMultiplier = 0.726
                 magicAddition = 3.33
                 return weight * magicMultiplier + weightModifier[width] + magicAddition;
@@ -106,11 +107,11 @@
             preformatMessage = (psiPressure, metricSystem) => {
                 var pressure;
                 if (metricSystem == 'bar') {
-                    pressure = rounded(psiToBar(psiPressure));
+                    pressure = psiToBar(psiPressure);
                 } else {
-                    pressure = rounded(psiPressure);
+                    pressure = psiPressure;
                 };
-                return `${pressure} ${metricSystem}`;
+                return `${rounded(pressure)} ${metricSystem}`;
             };
 
             createMessage = () => preformatMessage(
