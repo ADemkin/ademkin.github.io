@@ -112,7 +112,7 @@
 
             update = () => result.value = createMessage();
 
-            input.oninput = () =>  update();
+            $("#weight").on("input", () => update());
             $(".btn").on("click", () => update());
             update();
         </script>
